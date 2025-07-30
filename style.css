@@ -1,7 +1,16 @@
+/* File: style.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(270deg, #e0c3fc, #8ec5fc);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
@@ -54,21 +63,68 @@ main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 2em;
-}
-
-.gallery {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  width: 200px;
-  height: auto;
+.section {
+  padding: 30px;
+  margin: 30px 0;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1em;
+}
+
+.org-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+.venn {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  line-height: 150px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.men {
+  background-color: #3498db;
+  left: 0;
+  z-index: 1;
+}
+
+.women {
+  background-color: #e74c3c;
+  left: 100px;
+  z-index: 2;
+  opacity: 0.8;
 }
 
 footer {
