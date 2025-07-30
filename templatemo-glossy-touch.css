@@ -759,7 +759,7 @@ button[type="submit"] {
         padding: 10px 20px;
     }
     .dropdown-content {
-        position: static;
+        position: absolute;
         width: 100%;
         max-width: 200px;
         margin-top: 0;
