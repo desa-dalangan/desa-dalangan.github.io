@@ -54,16 +54,44 @@
 
     <section class="section population">
       <h2>Population & Culture</h2>
-      <div class="venn">
-        <div class="circle men">Men<br><span>52%</span></div>
-        <div class="circle women">Women<br><span>48%</span></div>
+      <div class="population-chart">
+        <canvas id="populationPie"></canvas>
       </div>
-      <p>The population is fairly balanced between men and women. Traditional dance, shadow puppetry, and local markets are key cultural elements.</p>
+      <p>The population consists of approximately 52% men and 48% women. Traditional arts and shared customs are central to Dalangan’s identity.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Dalangan Village Community</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('populationPie').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Men', 'Women'],
+        datasets: [{
+          data: [52, 48],
+          backgroundColor: ['#3498db', '#e74c3c'],
+          hoverOffset: 10
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: 'white',
+              font: {
+                family: 'Montserrat'
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
