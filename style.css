@@ -1,13 +1,13 @@
-/* File: style.css */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background: linear-gradient(270deg, #e0c3fc, #8ec5fc);
+  background: radial-gradient(circle at 20% 30%, #3a1c71, #d76d77, #ffaf7b);
   background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
+  animation: galaxyBG 30s ease infinite;
+  color: #333;
 }
 
-@keyframes gradientBG {
+@keyframes galaxyBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -64,12 +64,18 @@ main {
 }
 
 .section {
-  padding: 30px;
-  margin: 30px 0;
-  border-top: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
+  padding: 40px 20px;
+  margin: 40px 0;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  background: transparent;
+}
+
+.section h1,
+.section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #ffffff;
 }
 
 .map-container iframe {
@@ -81,50 +87,26 @@ main {
 }
 
 .org-image {
+  display: block;
   max-width: 100%;
   height: auto;
-  margin-bottom: 1em;
+  margin: 0 auto 2em auto;
   border-radius: 8px;
 }
 
-.venn {
-  position: relative;
-  height: 200px;
-  width: 300px;
-  margin: 20px auto;
-}
-
-.circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  line-height: 150px;
-  font-weight: bold;
-  color: white;
-  font-size: 16px;
+/* Pie Chart Styles */
+.population-chart {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
 }
 
-.circle span {
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.men {
-  background-color: #3498db;
-  left: 0;
-  z-index: 1;
-}
-
-.women {
-  background-color: #e74c3c;
-  left: 100px;
-  z-index: 2;
-  opacity: 0.8;
+.population-chart canvas {
+  max-width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 footer {
