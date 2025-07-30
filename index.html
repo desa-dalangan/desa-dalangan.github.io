@@ -1,97 +1,198 @@
+<!-- Updated index.html for Dalangan Village SPA using Glossy Touch Template -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Village Profile</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <title>Dalangan Village Profile</title>
+  <link rel="stylesheet" href="templatemo-glossy-touch.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="bg-shapes">
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+    <div class="shape"></div><div class="shape"></div><div class="shape"></div>
+  </div>
+
   <header>
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">Sub-Villages</button>
-        <div class="dropdown-content">
-          <a href="subvillage1.html">Sub-Village 1</a>
-          <a href="subvillage2.html">Sub-Village 2</a>
-          <a href="subvillage3.html">Sub-Village 3</a>
+    <div class="container">
+      <nav class="glass">
+        <div class="logo" onclick="showPage('home')">
+          <div class="logo-icon">🌾</div>
+          <span>Dalangan Village</span>
         </div>
-      </div>
-      <a href="documentation.html">Documentation</a>
-      <a href="developer.html">Developer</a>
-    </nav>
+        <div class="nav-links">
+          <a href="#" onclick="showPage('home')" class="active">Home</a>
+          <div class="dropdown">
+            <a href="#">Sub-Villages ▾</a>
+            <div class="dropdown-content">
+              <a href="#" onclick="showPage('subvillage1')">Sub-Village 1</a>
+              <a href="#" onclick="showPage('subvillage2')">Sub-Village 2</a>
+              <a href="#" onclick="showPage('subvillage3')">Sub-Village 3</a>
+            </div>
+          </div>
+          <a href="#" onclick="showPage('documentation')">Documentation</a>
+          <a href="#" onclick="showPage('developer')">Developer</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="section welcome">
-      <h1>Welcome to Dalangan Village</h1>
-    </section>
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="content-wrapper">
+        <section class="hero glass">
+          <div class="hero-image">
+            <img src="images/village-welcome.jpg" alt="Village Welcome" />
+          </div>
+          <div class="hero-content">
+            <h1>Welcome to Dalangan</h1>
+            <p>A peaceful village in Blora, Central Java rich with tradition, unity, and natural beauty.</p>
+            <a href="#" class="cta-button" onclick="showPage('documentation')">Explore Gallery</a>
+          </div>
+        </section>
 
-    <section class="section description">
-      <h2>Village Description</h2>
-      <p>Dalangan is a traditional village located in Blora, Central Java, known for its rich culture, rice fields, and strong community bonds. This village is surrounded by green landscapes and features periodic festivals and local craftsmanship.</p>
-    </section>
+        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+          <h2>About the Village</h2>
+          <p>Dalangan is a cultural hub surrounded by rice fields and forested lands. Known for its traditional art, community festivals, and sustainable living, it offers a glimpse into the heart of Javanese life.</p>
+        </section>
 
-    <section class="section map">
-      <h2>Map & Geography</h2>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.677954524926!2d111.41000021520787!3d-7.837000179494723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77454f84bdcc23%3A0x13b84b4b9e7c8b88!2sDalangan%2C%20Blora%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1610000000000" allowfullscreen loading="lazy"></iframe>
+        <section class="glass" style="padding: 40px; margin-bottom: 40px; text-align: center;">
+          <h2>Village Map</h2>
+          <iframe style="width: 66%; aspect-ratio: 16/9; border-radius: 12px; border: none; margin-top: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.677954524926!2d111.41000021520787!3d-7.837000179494723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77454f84bdcc23%3A0x13b84b4b9e7c8b88!2sDalangan%2C%20Blora%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1610000000000" allowfullscreen loading="lazy"></iframe>
+        </section>
+
+        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+          <h2>Organization Structure</h2>
+          <img src="images/organization-placeholder.jpg" alt="Organization Chart" style="width: 100%; max-width: 600px; display: block; margin: 20px auto; border-radius: 12px;">
+        </section>
+
+        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+          <h2>Population & Culture</h2>
+          <canvas id="populationChart" style="max-width: 300px; margin: 0 auto; background: white; border-radius: 10px;"></canvas>
+          <p style="margin-top: 20px; text-align: center;">52% Male, 48% Female — Dalangan values equality and cultural participation by all.</p>
+        </section>
+
+        <section class="glass" style="padding: 40px;">
+          <h2>Cultural Activities</h2>
+          <p>Dalangan holds annual shadow puppet festivals, community rice harvest rituals, and gamelan music nights. Each event strengthens community bonds.</p>
+        </section>
       </div>
-      <p>Located in Blora, Central Java, Dalangan is surrounded by lush landscapes and is shaped by a tropical monsoon climate with rich agricultural resources.</p>
-    </section>
+    </div>
+  </div>
 
-    <section class="section organization">
-      <h2>Organizational Structure</h2>
-      <img src="images/org-structure.jpg" alt="Organization Structure" class="org-image" />
-      <ul>
-        <li>Village Head: [Name]</li>
-        <li>Secretary: [Name]</li>
-        <li>Other Roles...</li>
-      </ul>
-    </section>
+  <div id="subvillage1" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 40px;">
+        <h2>Sub-Village 1</h2>
+        <p><strong>Population:</strong> [Placeholder]</p>
+        <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
+        <p><strong>Facilities:</strong> [Placeholder]</p>
+        <p><strong>Economy Potential:</strong> [Placeholder]</p>
+        <p><strong>Problems:</strong> [Placeholder]</p>
+        <p><strong>Suggestions:</strong> [Placeholder]</p>
+      </section>
+    </div></div>
+  </div>
 
-    <section class="section population">
-      <h2>Population & Culture</h2>
-      <div class="population-chart">
-        <canvas id="populationPie"></canvas>
-      </div>
-      <p>The population consists of approximately 52% men and 48% women. Traditional arts and shared customs are central to Dalangan’s identity.</p>
-    </section>
-  </main>
+  <div id="subvillage2" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 40px;">
+        <h2>Sub-Village 2</h2>
+        <p><strong>Population:</strong> [Placeholder]</p>
+        <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
+        <p><strong>Facilities:</strong> [Placeholder]</p>
+        <p><strong>Economy Potential:</strong> [Placeholder]</p>
+        <p><strong>Problems:</strong> [Placeholder]</p>
+        <p><strong>Suggestions:</strong> [Placeholder]</p>
+      </section>
+    </div></div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Dalangan Village Community</p>
-  </footer>
+  <div id="subvillage3" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 40px;">
+        <h2>Sub-Village 3</h2>
+        <p><strong>Population:</strong> [Placeholder]</p>
+        <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
+        <p><strong>Facilities:</strong> [Placeholder]</p>
+        <p><strong>Economy Potential:</strong> [Placeholder]</p>
+        <p><strong>Problems:</strong> [Placeholder]</p>
+        <p><strong>Suggestions:</strong> [Placeholder]</p>
+      </section>
+    </div></div>
+  </div>
+
+  <div id="documentation" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 40px;">
+        <h2>Village Documentation</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+          <img src="images/photo1.jpg" alt="Festival" style="width: 300px; border-radius: 10px;">
+          <img src="images/photo2.jpg" alt="Farming" style="width: 300px; border-radius: 10px;">
+          <img src="images/photo3.jpg" alt="Gathering" style="width: 300px; border-radius: 10px;">
+        </div>
+      </section>
+    </div></div>
+  </div>
+
+  <div id="developer" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 40px;">
+        <h2>Developer</h2>
+        <p>Name: [Your Name]</p>
+        <p>Email: [you@example.com]</p>
+        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">@yourusername</a></p>
+        <p>Affiliation: [Your School or Community]</p>
+      </section>
+    </div></div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <footer class="glass">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('documentation')">Gallery</a>
+            <a href="#" onclick="showPage('developer')">Developer</a>
+          </div>
+          <div class="copyright">
+            &copy; 2025 Dalangan Village Profile. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="templatemo-glossy-touch.js"></script>
   <script>
-    const ctx = document.getElementById('populationPie').getContext('2d');
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Men', 'Women'],
-        datasets: [{
-          data: [52, 48],
-          backgroundColor: ['#3498db', '#e74c3c'],
-          hoverOffset: 10
-        }]
-      },
-      options: {
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: 'white',
-              font: {
-                family: 'Montserrat'
+    const ctx = document.getElementById('populationChart')?.getContext('2d');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Men', 'Women'],
+          datasets: [{
+            data: [52, 48],
+            backgroundColor: ['#3498db', '#e74c3c'],
+            hoverOffset: 10
+          }]
+        },
+        options: {
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: '#fff',
+                font: { family: 'Montserrat' }
               }
             }
           }
         }
-      }
-    });
+      });
+    }
   </script>
 </body>
 </html>
