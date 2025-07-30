@@ -1,40 +1,54 @@
+/* File: index.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Village - [Village Name]</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    h1 { color: #2c3e50; }
-    nav a { margin-right: 15px; }
-    footer { margin-top: 50px; font-size: 0.8em; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village Profile</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to [Village Name]</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#history">History</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Sub-Villages</button>
+        <div class="dropdown-content">
+          <a href="subvillage1.html">Sub-Village 1</a>
+          <a href="subvillage2.html">Sub-Village 2</a>
+          <a href="subvillage3.html">Sub-Village 3</a>
+        </div>
+      </div>
+      <a href="documentation.html">Documentation</a>
+      <a href="developer.html">Developer</a>
+    </nav>
+  </header>
 
-  <section id="about">
-    <h2>About Our Village</h2>
-    <p>Describe the location, population, and special features.</p>
-  </section>
+  <main>
+    <section>
+      <h1>Welcome to [Village Name]</h1>
+      <h2>Map & Geography</h2>
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" allowfullscreen></iframe>
+      <p>Description of geography, landscape, and climate.</p>
+    </section>
 
-  <section id="history">
-    <h2>History & Culture</h2>
-    <p>Include festivals, legends, etc.</p>
-  </section>
+    <section>
+      <h2>Organizational Structure</h2>
+      <ul>
+        <li>Village Head: [Name]</li>
+        <li>Secretary: [Name]</li>
+        <li>Other Roles...</li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2>Contact & Governance</h2>
-    <p>Include local leader's name, contact email, or location map link.</p>
-  </section>
+    <section>
+      <h2>Population & Culture</h2>
+      <p>Statistics on population and overview of traditional culture and celebrations.</p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 [Village Name] Community. All rights reserved.
+    <p>&copy; 2025 [Village Name] Community</p>
   </footer>
 </body>
 </html>
