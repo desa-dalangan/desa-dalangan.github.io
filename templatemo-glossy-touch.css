@@ -120,7 +120,6 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
 }
 .glass:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -141,6 +140,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 30px 45px;
+    overflow: visible; /* Allow dropdown to overflow */
 }
 .logo {
     font-size: 32px;
@@ -223,7 +223,7 @@ nav {
     border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     min-width: 200px;
-    z-index: 1;
+    z-index: 1000; /* Ensure it stays above other elements */
     top: 100%;
     left: 0;
     margin-top: 5px;
@@ -245,6 +245,11 @@ nav {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     border-radius: 5px;
+}
+/* Ensure dropdown stays visible when hovering over content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
 }
 /* Page system */
 .page {
@@ -736,6 +741,7 @@ button[type="submit"] {
         flex-direction: column;
         gap: 20px;
         padding: 20px 30px;
+        overflow: visible; /* Allow dropdown to overflow on mobile */
     }
     .nav-links {
         gap: 15px;
