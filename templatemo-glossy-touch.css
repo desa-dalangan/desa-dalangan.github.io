@@ -1,117 +1,75 @@
-/* File: templatemo-glossy-touch.css */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
 
-/* Base Reset */
-body, html {
+/* General Reset and Body */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  background-size: cover;
-  color: white;
+  background: #202020;
+  color: #fff;
 }
 
-.page {
-  display: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.page.active {
+img {
+  max-width: 100%;
   display: block;
 }
 
-/* Background Floating Shapes */
-.bg-shapes {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-.shape {
-  width: 200px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-  position: absolute;
-  animation: float 20s infinite ease-in-out;
-}
-.shape:nth-child(1) { top: 10%; left: 15%; }
-.shape:nth-child(2) { top: 50%; left: 25%; }
-.shape:nth-child(3) { top: 20%; left: 75%; }
-.shape:nth-child(4) { top: 80%; left: 80%; }
-.shape:nth-child(5) { top: 30%; left: 50%; }
-.shape:nth-child(6) { top: 70%; left: 20%; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.container {
-  max-width: 1140px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* Glassmorphism Card */
+/* Glass Container */
 .glass {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav.glass {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.logo-icon {
-  margin-right: 10px;
+  padding: 16px 32px;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 20px;
 }
 
-.nav-links a, .dropbtn {
+.nav-links a {
   color: white;
-  text-decoration: none;
-  font-size: 16px;
   padding: 8px 12px;
-  transition: all 0.3s;
   border-radius: 8px;
+  transition: 0.3s;
 }
 
-.nav-links a:hover, .dropbtn:hover {
-  background: rgba(255, 255, 255, 0.1);
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Dropdown menu */
+/* ✅ Dropdown Menu Fix START */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+.dropbtn {
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   min-width: 160px;
@@ -128,13 +86,13 @@ nav.glass {
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* ✅ Dropdown Menu Fix END */
 
 /* Hero Section */
 .hero {
@@ -142,10 +100,10 @@ nav.glass {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 60px 20px;
 }
 
-.hero-image img {
+.hero img {
   max-width: 400px;
   border-radius: 16px;
 }
@@ -155,19 +113,21 @@ nav.glass {
   max-width: 600px;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   color: white;
-  text-decoration: none;
-  margin-top: 10px;
-  transition: all 0.3s ease;
+  margin-top: 20px;
 }
 
 .cta-button:hover {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Footer */
@@ -177,31 +137,20 @@ footer.glass {
   font-size: 14px;
 }
 
-.footer-links {
-  margin-bottom: 10px;
-}
-
 .footer-links a {
-  color: white;
   margin: 0 10px;
-  text-decoration: none;
+  color: white;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* Utility */
-img {
-  max-width: 100%;
+/* Page Visibility Handling */
+.page {
+  display: none;
+}
+
+.page.active {
   display: block;
-}
-
-h1, h2, h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-p {
-  line-height: 1.6;
 }
