@@ -17,7 +17,7 @@
     <div class="container">
       <nav class="glass">
         <div class="logo" onclick="showPage('home')">
-          <div class="logo-icon">🌾</div>
+          <img src="images/placeholder.jpg" alt="Dalangan Village Logo" class="logo-icon" />
           <span>Dalangan Village</span>
         </div>
         <div class="nav-links">
@@ -43,7 +43,6 @@
   <div id="home" class="page active">
     <div class="container">
       <div class="content-wrapper">
-
         <section class="hero glass">
           <div class="hero-image">
             <img src="images/village-welcome.jpg" alt="Village Welcome" />
@@ -55,32 +54,33 @@
           </div>
         </section>
 
-        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+        <section class="glass" style="padding: 20px; margin-bottom: 20px;">
           <h2>About the Village</h2>
           <p>Dalangan is a cultural hub surrounded by rice fields and forested lands. Known for its traditional art, community festivals, and sustainable living, it offers a glimpse into the heart of Javanese life.</p>
         </section>
 
-        <section class="glass" style="padding: 40px; margin-bottom: 40px; text-align: center;">
+        <section class="glass" style="padding: 20px; margin-bottom: 20px; text-align: center;">
           <h2>Village Map</h2>
-          <iframe style="width: 66%; aspect-ratio: 16/9; border-radius: 12px; border: none; margin-top: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.677954524926!2d111.41000021520787!3d-7.837000179494723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77454f84bdcc23%3A0x13b84b4b9e7c8b88!2sDalangan%2C%20Blora%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1610000000000" allowfullscreen loading="lazy"></iframe>
+          <div class="map-container">
+            <iframe style="width: 80%; aspect-ratio: 16/9; border-radius: 12px; border: none; margin-top: 10px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.677954524926!2d111.41000021520787!3d-7.837000179494723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77454f84bdcc23%3A0x13b84b4b9e7c8b88!2sDalangan%2C%20Blora%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1610000000000" allowfullscreen loading="lazy"></iframe>
+          </div>
         </section>
 
-        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+        <section class="glass" style="padding: 20px; margin-bottom: 20px;">
           <h2>Organizational Structure</h2>
-          <img src="images/organization-placeholder.jpg" alt="Organization Chart" style="width: 100%; max-width: 600px; display: block; margin: 20px auto; border-radius: 12px;">
+          <img src="images/organization-placeholder.jpg" alt="Organization Chart" style="width: 100%; max-width: 600px; display: block; margin: 10px auto; border-radius: 12px;">
         </section>
 
-        <section class="glass" style="padding: 40px; margin-bottom: 40px;">
+        <section class="glass" style="padding: 20px; margin-bottom: 20px;">
           <h2>Population & Culture</h2>
-          <canvas id="populationChart" style="max-width: 300px; margin: 0 auto; background: white; border-radius: 10px;"></canvas>
-          <p style="margin-top: 20px; text-align: center;">52% Male, 48% Female — Dalangan values equality and cultural participation by all.</p>
+          <canvas id="populationChart" style="max-width: 300px; margin: 10px auto;"></canvas>
+          <p style="margin-top: 10px; text-align: center;">52% Male, 48% Female — Dalangan values equality and cultural participation by all.</p>
         </section>
 
-        <section class="glass" style="padding: 40px;">
+        <section class="glass" style="padding: 20px;">
           <h2>Cultural Activities</h2>
           <p>Dalangan holds annual shadow puppet festivals, community rice harvest rituals, and gamelan music nights. Each event strengthens community bonds.</p>
         </section>
-
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@
   <!-- Sub-Villages -->
   <div id="subvillage1" class="page">
     <div class="container"><div class="content-wrapper">
-      <section class="glass" style="padding: 40px;">
+      <section class="glass" style="padding: 20px;">
         <h2>Sub-Village 1</h2>
         <p><strong>Population:</strong> [Placeholder]</p>
         <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
@@ -102,7 +102,7 @@
 
   <div id="subvillage2" class="page">
     <div class="container"><div class="content-wrapper">
-      <section class="glass" style="padding: 40px;">
+      <section class="glass" style="padding: 20px;">
         <h2>Sub-Village 2</h2>
         <p><strong>Population:</strong> [Placeholder]</p>
         <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
@@ -116,7 +116,7 @@
 
   <div id="subvillage3" class="page">
     <div class="container"><div class="content-wrapper">
-      <section class="glass" style="padding: 40px;">
+      <section class="glass" style="padding: 20px;">
         <h2>Sub-Village 3</h2>
         <p><strong>Population:</strong> [Placeholder]</p>
         <p><strong>Periodic Cultural Activities:</strong> [Placeholder]</p>
@@ -131,7 +131,7 @@
   <!-- Documentation -->
   <div id="documentation" class="page">
     <div class="container"><div class="content-wrapper">
-      <section class="glass" style="padding: 40px;">
+      <section class="glass" style="padding: 20px;">
         <h2>Village Documentation</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
           <img src="images/photo1.jpg" alt="Festival" style="width: 300px; border-radius: 10px;">
@@ -145,7 +145,7 @@
   <!-- Developer -->
   <div id="developer" class="page">
     <div class="container"><div class="content-wrapper">
-      <section class="glass" style="padding: 40px;">
+      <section class="glass" style="padding: 20px;">
         <h2>Developer</h2>
         <p>Name: [Your Name]</p>
         <p>Email: [you@example.com]</p>
@@ -198,6 +198,9 @@
                 font: { family: 'Montserrat' }
               }
             }
+          },
+          layout: {
+            padding: 0
           }
         }
       });
