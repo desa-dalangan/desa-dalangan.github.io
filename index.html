@@ -33,6 +33,7 @@
           </div>
           
           <a href="#" onclick="showPage('documentation')">Dokumentasi</a>
+          <a href="#" onclick="showPage('article')">Artikel</a> <!-- ✅ New Tab -->
           <a href="#" onclick="showPage('developer')">Pengembang</a>
         </div>
       </nav>
@@ -142,6 +143,22 @@
     </div></div>
   </div>
   
+  <!-- ✅ Artikel Page -->
+  <div id="article" class="page">
+    <div class="container"><div class="content-wrapper">
+      <section class="glass" style="padding: 20px;">
+        <h2>Artikel Literasi KKNT Dalangan</h2>
+        <iframe src="Artikel Literasi KKNT Dalangan.pdf" 
+                width="100%" height="600px" 
+                style="border-radius: 12px; border: none;">
+        </iframe>
+        <p style="text-align: center; margin-top: 10px;">
+          Jika PDF tidak tampil, <a href="Artikel Literasi KKNT Dalangan.pdf" target="_blank">klik di sini untuk unduh</a>.
+        </p>
+      </section>
+    </div></div>
+  </div>
+  
   <!-- Developer -->
   <div id="developer" class="page">
     <div class="container"><div class="content-wrapper">
@@ -163,6 +180,7 @@
           <div class="footer-links">
             <a href="#" onclick="showPage('home')">Home</a>
             <a href="#" onclick="showPage('documentation')">Gallery</a>
+            <a href="#" onclick="showPage('article')">Artikel</a>
             <a href="#" onclick="showPage('developer')">Developer</a>
           </div>
           <div class="copyright">
@@ -189,7 +207,7 @@
           labels: ['Male', 'Female'],
           datasets: [{
             data: [male, female],
-            backgroundColor: ['#3498db', '#e74c3c'], // Blue + Red
+            backgroundColor: ['#3498db', '#e74c3c'],
             borderColor: '#ffffff',
             borderWidth: 2,
             hoverOffset: 12
@@ -229,7 +247,6 @@
         }
       });
     }
-    
     
     // Page switching logic
     function showPage(id) {
